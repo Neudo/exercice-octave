@@ -10,18 +10,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         gsap.set(svgPath, {
           strokeDasharray: pathLength,
-          strokeDashoffset: pathLength,
+          strokeDashoffset: -pathLength,
         });
 
         gsap.to(svgPath, {
-          strokeDashoffset: 0,
-          duration: 2,
+          strokeDashoffset: pathLength * 0.1,
           ease: "none",
           scrollTrigger: {
             trigger: ".trigger-svg",
-            start: "-200px 80%",
+            start: "-350px bottom",
             end: "bottom 20%",
             scrub: 1,
+            markers: true,
           },
         });
       }
@@ -48,24 +48,27 @@ document.addEventListener("DOMContentLoaded", function (event) {
       });
 
       // Animation reveal-y-with-offset (pour les cartes avec décalage) - desktop seulement
-      if (window.innerWidth >= 1280) { // xl breakpoint
+      if (window.innerWidth >= 1280) {
+        // xl breakpoint
         gsap.set(".reveal-y-with-offset", {
           y: -30,
           opacity: 0,
         });
 
-        document.querySelectorAll(".reveal-y-with-offset").forEach((element) => {
-          gsap.to(element, {
-            y: -40,
-            opacity: 1,
-            duration: 0.3,
-            ease: "power1.out",
-            scrollTrigger: {
-              trigger: element,
-              start: "top 90%",
-            },
+        document
+          .querySelectorAll(".reveal-y-with-offset")
+          .forEach((element) => {
+            gsap.to(element, {
+              y: -40,
+              opacity: 1,
+              duration: 0.3,
+              ease: "power1.out",
+              scrollTrigger: {
+                trigger: element,
+                start: "top 90%",
+              },
+            });
           });
-        });
       }
 
       // Animation reveal-y standard
