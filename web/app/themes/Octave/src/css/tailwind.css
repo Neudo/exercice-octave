@@ -1,9 +1,18 @@
 @import "tailwindcss";
-
+@import "../../assets/fonts/icomoon/style.css";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 @layer base {
   body {
     font-family: "Poppins", sans-serif;
+  }
+
+  main {
+    color: #fff;
+    background: radial-gradient(
+      285.21% 589.51% at -4.44% 50%,
+      #451dc7 0%,
+      #04f06a 100%
+    );
   }
 }
