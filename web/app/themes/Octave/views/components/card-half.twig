@@ -1,0 +1,14 @@
+<div class="w-full">
+  <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+    <div class="md:col-span-8">
+      {% if left %}
+        {% include "components/card-full.twig" with left %}
+      {% endif %}
+    </div>
+    <div class="md:col-span-4 flex">
+      {% if right %}
+        {% include "components/card.twig" with right %}
+      {% endif %}
+    </div>
+  </div>
+</div>
