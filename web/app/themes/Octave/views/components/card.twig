@@ -2,7 +2,7 @@
 {% set isBlue = (cardColor == 'blue') %}
 {% set textMain = isBlue ? 'text-white' : 'text-black' %}
 
-<div class="card relative max-w-[412px] mx-auto {{ offset ? 'xl:translate-y-[-40px]' : '' }} rounded-xl {{ cardColor == 'blue' ? 'blue-card' : 'white-card' }} hover:shadow-md transition overflow-hidden">
+<div class="card relative max-w-[412px] mx-auto {{ offset ? 'xl:translate-y-[-40px] reveal-y-with-offset' : 'reveal-y' }} rounded-xl {{ cardColor == 'blue' ? 'blue-card' : 'white-card' }} hover:shadow-md transition overflow-hidden">
 {% if tag %}
   <span class="{{ cardColor == 'blue' ? 'bg-[#451DC7] text-white' : 'bg-white text-[#451DC7]' }}  uppercase py-[4px] px-[12px] rounded-full absolute top-[24px] left-[24px]">{{ tag }}</span>
 {% endif %}
@@ -14,7 +14,7 @@
       <p class="text-sm mb-1 uppercase {{ cardColor == 'blue' ? 'text-[#04F06A]' : 'text-[#451DC7]' }}">{{ categories|join('  <span class="mx-1">·</span>  ') }}</p>
     {% endif %}
     {% if title %}
-      <h3 class="text-xl leading-snug {{ cardColor == 'blue' ? 'text-white' : 'text-black' }}">{{ title }}</h3>
+      <h3 class="reveal-y text-xl leading-snug {{ cardColor == 'blue' ? 'text-white' : 'text-black' }}">{{ title }}</h3>
     {% endif %}
     {% if url %}
     <a href="{{ url }}" class="mt-4 inline-flex flex-col w-fit before:content-[''] before:absolute before:inset-0 {{ textMain }}">
