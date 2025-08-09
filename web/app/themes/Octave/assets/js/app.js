@@ -47,24 +47,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
         opacity: 0,
       });
 
-      // Animation reveal-y-with-offset (pour les cartes avec décalage)
-      gsap.set(".reveal-y-with-offset", {
-        y: -30,
-        opacity: 0,
-      });
-
-      document.querySelectorAll(".reveal-y-with-offset").forEach((element) => {
-        gsap.to(element, {
-          y: -40,
-          opacity: 1,
-          duration: 0.3,
-          ease: "power1.out",
-          scrollTrigger: {
-            trigger: element,
-            start: "top 90%",
-          },
+      // Animation reveal-y-with-offset (pour les cartes avec décalage) - desktop seulement
+      if (window.innerWidth >= 1280) { // xl breakpoint
+        gsap.set(".reveal-y-with-offset", {
+          y: -30,
+          opacity: 0,
         });
-      });
+
+        document.querySelectorAll(".reveal-y-with-offset").forEach((element) => {
+          gsap.to(element, {
+            y: -40,
+            opacity: 1,
+            duration: 0.3,
+            ease: "power1.out",
+            scrollTrigger: {
+              trigger: element,
+              start: "top 90%",
+            },
+          });
+        });
+      }
 
       // Animation reveal-y standard
       document.querySelectorAll(".reveal-y").forEach((element) => {
