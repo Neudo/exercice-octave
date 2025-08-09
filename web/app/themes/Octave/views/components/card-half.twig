@@ -1,11 +1,11 @@
 <div class="w-full">
   <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-    <div class="md:col-span-8">
+    <div class="md:col-span-8 {{ reverse ? 'md:order-2' : 'md:order-1' }}">
       {% if left %}
-        {% include "components/card-full.twig" with left %}
+        {% include "components/card-full.twig" with left|merge({offset: offset}) %}
       {% endif %}
     </div>
-    <div class="md:col-span-4 flex">
+    <div class="md:col-span-4 flex {{ reverse ? 'md:order-1' : 'md:order-2' }} {{ offset ? 'xl:translate-y-[40px]' : '' }}">
       {% if right %}
         {% include "components/card.twig" with right %}
       {% endif %}

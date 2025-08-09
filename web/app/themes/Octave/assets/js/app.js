@@ -21,13 +21,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
             start: "-350px bottom",
             end: "bottom 20%",
             scrub: 1,
-            markers: true,
           },
         });
       }
 
       gsap.set(".reveal-main-title", {
-        y: 50,
+        y: 40,
         opacity: 0,
       });
 
@@ -43,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       });
 
       gsap.set(".reveal-y", {
-        y: 13,
+        y: 10,
         opacity: 0,
       });
 

@@ -62,7 +62,7 @@
         </div>
 
         {# Second row #}
-        <div class="flex flex-wrap justify-center gap-6 mb-[40px]">
+        <div class="flex flex-wrap justify-center gap-6 mb-[80px]">
             {% include "components/card-full.twig" with {
                 cardColor: "blue",
                 tag: "Insights",
@@ -76,24 +76,59 @@
         {# Third row #}
         <div class="flex flex-wrap justify-center gap-6 mb-[40px]">
             {% include "components/card-half.twig" with {
+              offset: true,
+              reverse: false,
               left: {
                 cardColor: "white",
                 tag: "Case studies",
                 categories: ["Industry", "Capability"],
                 title: "We designed a world-leading new specialty healthcare service for a global pharma company",
                 url: "#",
-              image: { src: function('get_theme_file_uri', 'assets/images/image5.jpg'), alt: 'image 5' },
-              offset: true
-            },
-            right: {
+                image: { src: function('get_theme_file_uri', 'assets/images/image5.jpg'), alt: 'image 5' }
+              },
+              right: {
+                cardColor: "blue",
+                tag: "Insights",
+                categories: ["Industry", "Capability"],
+                title: "Second-Hand: An Expanding Market for 2024",
+                url: "#",
+                image: { src: function('get_theme_file_uri', 'assets/images/image6.jpg'), alt: 'image 6' }
+              }
+            } %}
+        </div>
+
+
+
+        <h2 class="text-6xl font-bold text-center py-6 md:py-16">Cards with more text</h2>
+        <div class="flex flex-wrap justify-center gap-6 mb-[40px]">
+            {% include "components/card.twig" with {
               cardColor: "blue",
               tag: "Insights",
               categories: ["Industry", "Capability"],
-              title: "Second-Hand: An Expanding Market for 2024",
+              title: "Keys to Understand and Apply the European Law on Artificial Intelligence",
               url: "#",
-              image: { src: function('get_theme_file_uri', 'assets/images/image6.jpg'), alt: 'image 6' },
+              image: { src: function('get_theme_file_uri', 'assets/images/image1.jpg'), alt: 'image 1' },
               offset: false
-            }
+            } %}
+
+            {% include "components/card.twig" with {
+              cardColor: "blue",
+              tag: "Insights",
+              categories: ["Industry", "Capability"],
+              title: "Reducing the Environmental Impact of Cybersecurity: Where toReducing the Environmental Impact of Cybersecurity: Where toReducing the Environmental Impact of Cybersecurity: Where to Begin?",
+              url: "#",
+              image: { src: function('get_theme_file_uri', 'assets/images/image2.jpg'), alt: 'image 2' },
+              offset: false
+            } %}
+
+            {% include "components/card.twig" with {
+              cardColor: "white",
+              tag: "Case studies",
+              categories: ["Industry", "Capability"],
+              title: "SNCF Réseau implements a more efficient hourly production system.",
+              url: "#",
+              image: { src: function('get_theme_file_uri', 'assets/images/image3.jpg'), alt: 'image 2' },
+              offset: false
             } %}
         </div>
 
