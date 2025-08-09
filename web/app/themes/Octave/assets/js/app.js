@@ -1,17 +1,31 @@
 // wait until DOM is ready
 document.addEventListener("DOMContentLoaded", function (event) {
-  console.log("DOM loaded");
-
-  //wait until images, links, fonts, stylesheets, and js is loaded
   window.addEventListener(
     "load",
-    function (e) {
-      console.log("window loaded");
-      gsap.to(".line-svg", {
-        rotation: 360,
-        duration: 2,
-        ease: "bounce.out",
-      });
+    function () {
+      const svgPath = document.querySelector(".line-svg path");
+
+      if (svgPath) {
+        const pathLength = svgPath.getTotalLength();
+
+        gsap.set(svgPath, {
+          strokeDasharray: pathLength,
+          strokeDashoffset: pathLength,
+        });
+
+        gsap.to(svgPath, {
+          strokeDashoffset: 0,
+          duration: 2,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".trigger-svg",
+            start: "-200px 80%",
+            end: "bottom 20%",
+            scrub: 1,
+            markers: true,
+          },
+        });
+      }
     },
     false
   );

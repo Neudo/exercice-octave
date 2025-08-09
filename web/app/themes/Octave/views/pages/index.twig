@@ -1,21 +1,21 @@
 {% extends "base.twig" %}
 
 {% block body %}
-    <header>
+    <header class="min-h-[90vh]">
         <h1 class="text-6xl font-bold text-center py-6 md:py-16">Test Octave Octave</h1>
         <p class="text-2xl text-gray-500 text-center">Quentin Bassalair - 09/08/2025</p>
     </header>
 
 
 
-    <main class="pt-26 px-[20px] md:px-[62px]">
+    <main class="pt-26 px-[20px] md:px-[62px] relative">
         <section class="pb-[80px]">
-        <div class="pb-[40px] md:pb-[125px]">
-        <img class="line-svg" src="{{ function('get_theme_file_uri', 'assets/images/line.svg') }}" alt="svg line">
+        <div class="pb-[40px] md:pb-[125px] max-w-screen overflow-hidden ">
+        {% include "components/line-svg.twig" %}
            <h1 class="font-light tracking-[-5%] leading-[50px] md:tracking-[-4%] text-[44px] md:text-[100px] lg:text-[140px] md:leading-[100px] lg:leading-[140px]">Our latest <br/> <span class="ml-6 md:ml-[70px] lg:ml-[110px]">impact</span> </h1>
 
            <div class="ml-6 md:ml-[70px] lg:ml-[110px] md:flex md:flex-col md:flex-row items-end gap-y-4 md:gap-x-4 md:justify-between flex-wrap max-w-[1089px]">
-            <ul class="mt-[16px] tracking-[-5%] text-[22px] leading-[30px] flex-wrap md:flex-row md:flex md:gap-2 max-w-[700px]">
+            <ul class="trigger-svg mt-[16px] tracking-[-5%] text-[22px] leading-[30px] flex-wrap md:flex-row md:flex md:gap-2 max-w-[700px]">
             <li>Driving change.</li>
             <li>Creating a Positive Impact for</li>
             <li>all our stakeholders.</li>
