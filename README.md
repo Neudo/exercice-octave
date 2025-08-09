@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <p align="center">
   <a href="https://roots.io/bedrock/">
     <img alt="Bedrock" src="https://cdn.roots.io/app/uploads/logo-bedrock.svg" height="100">
@@ -61,7 +59,10 @@ See the [Bedrock installation documentation](https://roots.io/bedrock/docs/insta
 - Follow [@rootswp on Twitter](https://twitter.com/rootswp)
 - Read the [Roots Blog](https://roots.io/blog/)
 - Subscribe to the [Roots Newsletter](https://roots.io/newsletter/)
->>>>>>> 9389f12 (first commit)
+  > > > > > > > 9389f12 (first commit)
+
 # Exercice-octave-octave
+
 # exercice-octave
+
 # exercice-octave

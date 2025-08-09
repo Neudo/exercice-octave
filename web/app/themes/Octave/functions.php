@@ -6,6 +6,17 @@
 Timber\Timber::init();
 
 function octave_enqueue_styles() {
+    // Enqueue IcoMoon BEFORE main CSS so icon font is available
+    $icomoon_path = get_theme_file_path('assets/fonts/icomoon/style.css');
+    if (file_exists($icomoon_path)) {
+        wp_enqueue_style(
+            'octave-icomoon',
+            get_theme_file_uri('assets/fonts/icomoon/style.css'),
+            [],
+            filemtime($icomoon_path)
+        );
+    }
+
     wp_enqueue_style(
         'octave-tailwind',
         get_template_directory_uri() . '/dist/css/style.css',

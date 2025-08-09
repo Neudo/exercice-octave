@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "../../assets/fonts/icomoon/style.css";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 @layer base {
@@ -14,5 +13,17 @@
       #451dc7 0%,
       #04f06a 100%
     );
+  }
+
+  .blue-card {
+    background: radial-gradient(
+        104.71% 432.93% at 29.43% 37.21%,
+        #451dc7 0%,
+        #250f6b 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  }
+  .white-card {
+    background: #fff;
   }
 }
