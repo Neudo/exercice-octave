@@ -1,12 +1,18 @@
 {% extends "base.twig" %}
 
 {% block body %}
-    <article>
-        <h1 class="text-6xl text-red-500 font-bold text-center">Bonjour les gens</h1>
-        {% for post in posts|slice(0, 3) %}
-            <h2>{{ post.title }}</h2>
-            <p>{{ post.content }}</p>
-            <a href="{{ post.link }}">Lire la suite</a>
-        {% endfor %}
-    </article>
+    <header>
+        <h1 class="text-6xl font-bold text-center py-6 md:py-16">Test Octave Octave</h1>
+        <p class="text-2xl text-gray-500 text-center">Quentin Bassalair - 09/08/2025</p>
+    </header>
+    <main>
+        <section>
+           <h1>Our latest <span>impact</span> </h1>
+           <p>Driving change. Creating a Positive Impact for all our stakeholders.</p>
+           <div>
+           <a href="#" class="text-red-500">All case studies</a>
+           <a href="#" class="text-red-500">All insights</a>
+           </div>
+        </section>
+    </main>
 {% endblock %}
