@@ -2,7 +2,7 @@
 {% set isBlue = (cardColor == 'blue') %}
 {% set textMain = isBlue ? 'text-white' : 'text-black' %}
 
-<div class="card relative max-w-[412px] {{ offset ? 'md:translate-y-[-40px]' : '' }} rounded-xl {{ cardColor == 'blue' ? 'blue-card' : 'white-card' }} hover:shadow-md transition overflow-hidden">
+<div class="card relative max-w-[412px] mx-auto {{ offset ? 'xl:translate-y-[-40px]' : '' }} rounded-xl {{ cardColor == 'blue' ? 'blue-card' : 'white-card' }} hover:shadow-md transition overflow-hidden">
 {% if tag %}
   <span class="{{ cardColor == 'blue' ? 'bg-[#451DC7] text-white' : 'bg-white text-[#451DC7]' }}  uppercase py-[4px] px-[12px] rounded-full absolute top-[24px] left-[24px]">{{ tag }}</span>
 {% endif %}
